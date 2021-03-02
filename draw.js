@@ -2,7 +2,10 @@ var points = [];
 var start = false;
 
 function setup() {
-  createCanvas(window. innerWidth, window.innerHeight);
+  let c = createCanvas(window.innerWidth, window.innerHeight);
+  c.id('canvas');
+  let ctx = drawingContext;
+  // console.log(ctx);
 }
 
 function draw() {
@@ -13,6 +16,7 @@ function draw() {
   }
   
   stroke(255);
+  strokeWeight(25);
   noFill();
   beginShape();
   for (let i = 0; i < points.length; i++) {
@@ -26,7 +30,7 @@ function draw() {
 
 function mousePressed() {
   start = true;
-  points = [];
+  points=[];
 }
 
 function mouseReleased() {
